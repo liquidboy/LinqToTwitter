@@ -20,6 +20,11 @@ To use:
             var twitterCtx = new TwitterContext(twitterExecute); //<-- use new executor in the context
 
 
+note 1 : there is a new TwitterExecute.cs that rips out the "System.Net.Http" and replaces it with "Windows.Web.Http" ... as per  - https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh781239.aspx
+
+note 2 : for the asyncauth to work i needed to override httpget/httppost in the webstoreahutorizer so that it used Windows.web.Http
+
+
 *********
 
 
