@@ -1,6 +1,6 @@
 **** jose's update
 
-Purely to get the library working in a Universal Application (UAP) on the Universap Windows Platform (UWP) demo
+Purely to get the library working in a Universal Application (UAP) on the Universal Windows Platform (UWP) demo
 
 To use:
 
