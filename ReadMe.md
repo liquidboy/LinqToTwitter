@@ -2,7 +2,22 @@
 
 Purely to get the library working in a UAP demo
 
+To use:
 
+            var auth = new SingleUserAuthorizer
+            {
+                CredentialStore = new SingleUserInMemoryCredentialStore
+                {
+                    ConsumerKey = "xxxxx",
+                    ConsumerSecret = "xxxxxx",
+                    OAuthToken = oAuthToken,  <-- retrieved already via a previous "auth.AuthorizeAsync();" call
+                    OAuthTokenSecret = oAuthTokenSecret, <-- retrieved already
+                }
+            };
+
+
+            var twitterExecute = new TwitterExecute(auth); //<-- use new Windows.Web.Http friendly Executor
+            var twitterCtx = new TwitterContext(twitterExecute); //<-- use new executor in the context
 
 
 *********
