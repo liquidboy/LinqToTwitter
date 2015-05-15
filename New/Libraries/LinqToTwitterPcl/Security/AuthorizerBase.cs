@@ -229,7 +229,7 @@ namespace LinqToTwitter
             }
         }
 
-        internal async Task<string> HttpGetAsync(string oauthUrl, IDictionary<string, string> parameters)
+        public virtual async Task<string> HttpGetAsync(string oauthUrl, IDictionary<string, string> parameters)
         {
             var req = new HttpRequestMessage(HttpMethod.Get, oauthUrl);
             req.Headers.Add("Authorization", GetAuthorizationString(HttpMethod.Get, oauthUrl, parameters));
@@ -249,7 +249,7 @@ namespace LinqToTwitter
             return await msg.Content.ReadAsStringAsync().ConfigureAwait(false);
         }
 
-        internal async Task<string> HttpPostAsync(string oauthUrl, IDictionary<string, string> parameters)
+        public virtual async Task<string> HttpPostAsync(string oauthUrl, IDictionary<string, string> parameters)
         {
             var postData =
                 (from keyValPair in parameters
